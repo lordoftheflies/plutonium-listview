@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`plutonium-listview`
+Material Design list-view.
+
+@demo demo/index.html 
+-->
+
+<dom-module id="plutonium-listview">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'plutonium-listview',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'plutonium-listview',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
