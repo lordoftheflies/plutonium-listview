@@ -1,6 +1,6 @@
 {
   "name": "plutonium-listview",
-  "description": "Material Design list-view.",
+  "description": "Material design listview component.",
   "main": "plutonium-listview.html",
   "keywords": [
     "html5", 
