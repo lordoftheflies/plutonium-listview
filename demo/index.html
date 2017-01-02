@@ -1,28 +1,74 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>plutonium-listview demo</title>
+        <title>plutonium-listview demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+        <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../plutonium-listview.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+        <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+        <link rel="import" href="../../iron-flex-layout/iron-flex-layout-classes.html">
+        <link rel="import" href="../../paper-listbox/paper-listbox.html">
+        <link rel="import" href="../plutonium-listview.html">
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
-  </head>
-  <body>
-    <div class="vertical-section-container centered">
-      <h3>Basic plutonium-listview demo</h3>
-      <demo-snippet>
-        <template>
-          <plutonium-listview></plutonium-listview>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+        <style is="custom-style" include="demo-pages-shared-styles iron-flex">
+        </style>
+    </head>
+    <body>
+        <div class="vertical-section-container centered">
+            <h3>Basic plutonium-listview demo</h3>
+            <demo-snippet>
+                <template>
+                    <plutonium-listview collection='[{"id": 0, "value": "test 0" }, {"id": 1, "value": "test 1" }]' class="layout vertical">
+                        <template id="item-template" is="dom-template">
+                            <div>
+                                <label>[[item.value]]</label>
+                            </div>
+                        </template>
+                    </plutonium-listview>
+                </template>
+            </demo-snippet>
+
+            <demo-snippet>
+                <template>
+                    <plutonium-listview collection='[{"id": 0, "value": "test 0" }, {"id": 1, "value": "test 1" }]' class="layout horizontal">
+                        <template id="item-template" is="dom-template">
+                            <div>
+                                <label>[[item.value]]</label>
+                            </div>
+                        </template>
+                    </plutonium-listview>
+                </template>
+            </demo-snippet>
+
+            <demo-snippet>
+                <template>
+                    <!--                    <plutonium-listview collection='[{"id": 0, "value": "test 0" }, {"id": 1, "value": "test 1" }]' class="layout horizontal">
+                                            <template id="templ" is="dom-template">
+                                                <div>
+                                                    <label>[[item.value]]</label>
+                                                </div>
+                                            </template>
+                                        </plutonium-listview>-->
+
+                    <template id="item-template" is="dom-template">
+                        <div>
+                            <label>[[item.value]]</label>
+                        </div>
+                    </template>
+
+                    <paper-listbox multi>
+                        <template is="dom-repeat" items='[{"id": 0, "value": "test 0" }, {"id": 1, "value": "test 1" }]'>
+                            <template is="plutonium-dom-ref" bind="[[item]]" ref="item-template"></template>
+                        </template>
+                    </paper-listbox>
+                </template>
+            </demo-snippet>
+
+
+        </div>
+    </body>
 </html>

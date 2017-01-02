@@ -1,4 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../plutonium-dom-ref/plutonium-dom-ref.html">
+<link rel="import" href="../paper-listbox/paper-listbox.html">
 
 <!--
 `plutonium-listview`
@@ -8,27 +10,32 @@ Material Design list-view.
 -->
 
 <dom-module id="plutonium-listview">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
-    <h2>Hello [[prop1]]</h2>
-  </template>
+    <template>
+        <style>
+            :host {
+                display: inline-block;
+            }
+        </style>
+        <content></content>
+        <paper-listbox>
+            <template is="dom-repeat" items="[[collection]]">
+                <template is="plutonium-dom-ref" bind="[[item]]" ref="item-template"></template>
+            </template>
+        </paper-listbox>
+    </template>
 
-  <script>
-    Polymer({
+    <script>
+        Polymer({
 
-      is: 'plutonium-listview',
+            is: 'plutonium-listview',
 
-      properties: {
-        prop1: {
-          type: String,
-          value: 'plutonium-listview',
-        },
-      },
+            properties: {
+                collection: {
+                    type: Array,
+                    notify: true
+                }
+            },
 
-    });
-  </script>
+        });
+    </script>
 </dom-module>

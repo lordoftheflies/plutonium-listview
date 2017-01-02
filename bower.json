@@ -2,8 +2,28 @@
   "name": "plutonium-listview",
   "description": "Material Design list-view.",
   "main": "plutonium-listview.html",
+  "keywords": [
+    "html5", 
+    "polymer", 
+    "plutonium", 
+    "template"
+  ],
+  "authors": [
+    "lordoftheflies <heglas11@gmail.com>"
+  ],
+  "license": "MIT",
+    "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": false,
   "dependencies": {
-    "polymer": "Polymer/polymer#^1.4.0"
+    "polymer": "Polymer/polymer#^1.4.0",
+    "plutonium-dom-ref": "lordoftheflies/plutonium-dom-ref#^0.0.1",
+    "paper-listbox": "PolymerElements/paper-listbox#^1.1.2"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
