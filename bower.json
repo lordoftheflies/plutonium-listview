@@ -6,7 +6,8 @@
     "html5", 
     "polymer", 
     "plutonium", 
-    "template"
+    "material design",
+    "list"
   ],
   "authors": [
     "lordoftheflies <heglas11@gmail.com>"
